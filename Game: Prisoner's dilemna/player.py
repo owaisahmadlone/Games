@@ -18,11 +18,11 @@ class Player():
         elif self.name == "angel":
             return 1
         elif self.name == "freidmann":
+            if counter_prev_move == 0:
+                self.event_recorder = True
             ans = 1
             if self.event_recorder:
                 ans = 0
-            if counter_prev_move == 0:
-                self.event_recorder = True
             return ans
         elif self.name == "demon":
             return 0
